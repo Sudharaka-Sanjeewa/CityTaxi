@@ -1,0 +1,60 @@
+<section class=" w3l-header-4 header-sticky">
+    <header class="absolute-top">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <h1><a class="navbar-brand" href="index.php"> <!--<span class="fa fa-line-chart" aria-hidden="true"></span> -->
+            CityTaxi
+            </a></h1>
+            <button class="navbar-toggler bg-gradient collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa icon-expand fa-bars"></span>
+        <span class="fa icon-close fa-times"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <?php if (strlen($_SESSION['did']==0)) {?>
+						<li class="nav-item">
+                        	<a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                    	</li>
+						<li class="nav-item">
+							<a class="nav-link" href="driver-signup.php">Driver Signup</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="driver-login.php">Driver Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="passenger-signup.php">Passenger Signup</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="passenger-login.php">Passenger login</a>
+						</li>
+					<?php }?>
+
+					<?php if (strlen($_SESSION['did']>0)) {?>
+						<li class="nav-item">
+                        	<a class="nav-link" href="driver-panel.php">Driver Panel<span class="sr-only">(current)</span></a>
+                    	</li>
+						<li class="nav-item">
+							<a class="nav-link" href="driver-booking.php">Bookings</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="driver-profile.php">Profile</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="driver-setting.php">Setting</a>
+						</li>
+						 <li class="nav-item">
+							<a class="nav-link" href="driver-logout.php">Logout</a>
+						</li>
+					<?php }?>
+                </ul>
+                
+            </div>
+        </div>
+
+        </nav>
+    </div>
+      </header>
+</section>
